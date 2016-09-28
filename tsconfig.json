@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5", // TODO: Setup Babel to trasnpile tsc output and target es2015?
+    "jsx": "react"
+  },
+  "files": [
+    "./typings/index.d.ts",
+    "./react-three.d.ts",
+    "./src/index.tsx"
+  ]
+}

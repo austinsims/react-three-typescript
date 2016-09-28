@@ -1,0 +1,18 @@
+{
+  "name": "react-three-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.tsx",
+  "author": "Austin Sims <adsims2001@gmail.com>",
+  "license": "Public Domain",
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-three": "^0.9.4",
+    "three": "^0.74.0"
+  },
+  "devDependencies": {
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2"
+  }
+}
