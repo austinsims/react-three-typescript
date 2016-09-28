@@ -13,24 +13,6 @@ interface ExampleSceneProps {
 }
 class ExampleScene extends React.Component<ExampleSceneProps, {}> {
   render() {
-    /*
-    let mainCameraElement = (<ReactTHREE.PerspectiveCamera
-        name={"maincamera"}
-        fov={75}
-        aspect={this.props.width / this.props.height}
-        near={1}
-        far={5000}
-        position={new THREE.Vector3(0, 0, 5)}
-        lookat={new THREE.Vector3(0,0,0)} />);
-    let myCubeElement = (<ReactTHREE.Mesh position={new THREE.Vector3(0, 0, 0)}
-                                          geometry={geometry}
-                                          material={material}/>);
-    let myCubeElement = meshFactory({
-      position: new THREE.Vector3(0, 0, 0),
-      geometry: geometry,
-      material: material,
-    });
-    */
     return (
       <ReactTHREE.Renderer width={this.props.width} height={this.props.height}>
         <ReactTHREE.Scene width={this.props.width} height={this.props.height} camera={'maincamera'}>
