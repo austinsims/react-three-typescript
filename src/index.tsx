@@ -3,10 +3,6 @@ import * as ReactDOM from 'react-dom';
 import * as THREE from 'three';
 import ReactTHREE = require('react-three');
 
-let meshFactory = React.createFactory(ReactTHREE.Mesh);
-let geometry = new THREE.BoxGeometry(1, 1, 1);
-let material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-
 interface ExampleSceneProps {
   width: number,
   height: number,
