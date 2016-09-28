@@ -6,6 +6,7 @@ import ReactTHREE = require('react-three');
 interface ExampleSceneProps {
   width: number,
   height: number,
+  cubeRot: THREE.Euler,
 }
 class ExampleScene extends React.Component<ExampleSceneProps, {}> {
   render() {
@@ -22,17 +23,27 @@ class ExampleScene extends React.Component<ExampleSceneProps, {}> {
               lookat={new THREE.Vector3(0,0,0)} />
           <ReactTHREE.Mesh position={new THREE.Vector3(0, 0, 0)}
                            geometry={new THREE.BoxGeometry(1, 1, 1)}
-                           material={new THREE.MeshBasicMaterial({color: 0x00ff00})}/>
+                           material={new THREE.MeshBasicMaterial({color: 0x00ff00})}
+                           rotation={this.props.cubeRot} />
         </ReactTHREE.Scene>
       </ReactTHREE.Renderer>
     );
   }
 }
 
-(function onFrame() {
+let x = 0;
+let y = 0;
+function onFrame(ts: number) {
   requestAnimationFrame(onFrame);
+
+  x += 0.1;
+  y += 0.1;
+  let cubeRot = new THREE.Euler(x, y);
   ReactTHREE.render(
-    <ExampleScene width={window.innerWidth} height={window.innerHeight} />,
+    <ExampleScene width={window.innerWidth}
+                  height={window.innerHeight}
+                  cubeRot={cubeRot}/>,
     document.getElementById('application')
   );
-})();
+}
+requestAnimationFrame(onFrame);

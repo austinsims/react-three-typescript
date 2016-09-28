@@ -30,10 +30,15 @@ declare module 'react-three' {
   }
   export class Scene extends React.Component<SceneProps, {}> {}
 
+  export interface XY {
+    x: number,
+    y: number,
+  }
   export interface MeshProps {
     position: THREE.Vector3,
     geometry: THREE.Geometry,
     material: THREE.Material,
+    rotation?: THREE.Euler,
   }
   export class Mesh extends React.Component<MeshProps, {}> {}
 
